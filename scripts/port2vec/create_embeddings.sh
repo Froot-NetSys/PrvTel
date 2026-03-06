@@ -17,7 +17,7 @@ EMBEDDED_DATA_PATH="path/to/embedded_output.parquet"
 # Note that the embedding_size and ann_trees specified need to match those used for training when loading a pretrained model. 
 # The blocksize can be tuned based on your memory constraints (and whether you are using parquet or csv).
 echo "Mapping ports and protocols to embeddings..."
-python "${REPO}/scripts/embed_ports.py" \
+python "${REPO}/scripts/embed_ports/embed_ports.py" \
     --input_data "${TARGET_DATA}" \
     --train_data "${PORT2VEC_TRAIN_DATA}" \
     --model_dir "${PORT2VEC_MODEL_DIR}" \
