@@ -1,0 +1,39 @@
+{
+    "transforms": {
+        "default": [
+            { "method": "log" },
+            { "method": "standard" }
+        ],
+        "custom": [
+            {
+                "method": "standard",
+                "columns": [
+                    "Src Port_0", "Src Port_1", "Src Port_2", "Src Port_3",
+                    "Src Port_4", "Src Port_5", "Src Port_6", "Src Port_7",
+                    "Src Port_8", "Src Port_9", "Dst Port_0", "Dst Port_1",
+                    "Dst Port_2", "Dst Port_3", "Dst Port_4", "Dst Port_5",
+                    "Dst Port_6", "Dst Port_7", "Dst Port_8", "Dst Port_9",
+                    "Protocol_0", "Protocol_1", "Protocol_2", "Protocol_3",
+                    "Protocol_4", "Protocol_5", "Protocol_6", "Protocol_7",
+                    "Protocol_8", "Protocol_9"
+                ]
+            },
+            {
+                "method": "GMM_log",
+                "columns": [
+                    "Flow Duration", "Total Fwd Packet", "Fwd Header Length", "Fwd Packets/s", "FWD Init Win Bytes", "Flow IAT Mean", "Fwd IAT Mean", "Fwd IAT Total"
+                ]
+            }
+        ]
+    },
+    "model": {
+        "type": "vae_corr",
+        "model_kwargs": {
+            "hidden_dim": 1024,
+            "latent_dim": 64,
+            "use_beta": true,
+            "regularizer_type" : "kl",
+            "lr": 0.001
+        }
+    }
+}

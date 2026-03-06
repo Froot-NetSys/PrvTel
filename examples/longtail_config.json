@@ -1,0 +1,27 @@
+{
+    "transforms": {
+        "default": [
+            { "method": "GMM_log" }
+        ]
+    },
+    "model": {
+        "type": "vae",
+        "model_kwargs": {
+            "hidden_dim": 512,
+            "latent_dim": 64,
+            "use_beta": true,
+            "regularizer_type": "kl",
+            "lr": 0.001
+        }
+    },
+    "data": {
+        "dataset_type": "standard",
+        "batch_size": 128
+    },
+    "training": {
+        "n_epochs": 200,
+        "patience": 50,
+        "delta": 1.0,
+        "logging_freq": 10
+    }
+}

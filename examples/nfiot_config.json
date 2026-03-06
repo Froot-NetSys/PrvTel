@@ -1,0 +1,29 @@
+{
+    "transforms": {
+        "default": [
+            { "method": "standard" }
+        ],
+        "custom": [
+            {
+                "method": "GMM_log",
+                "columns": [
+                    "IN_BYTES",
+                    "OUT_BYTES",
+                    "IN_PKTS",
+                    "OUT_PKTS",
+                    "FLOW_DURATION_MILLISECONDS"
+                ]
+            }
+        ]
+    },
+    "model": {
+        "type": "vae_corr",
+        "model_kwargs": {
+            "hidden_dim": 512,
+            "latent_dim": 32,
+            "use_beta": true,
+            "regularizer_type" : "kl",
+            "lr": 0.005
+        }
+    }
+}

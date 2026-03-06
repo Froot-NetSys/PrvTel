@@ -1,0 +1,44 @@
+{
+    "transforms": {
+        "default": [
+            { "method": "log" },
+            { "method": "standard" }
+        ],
+        "custom": [
+            {
+                "method": "minmax",
+                "columns": ["Timestamp"]
+            },
+            {
+                "method": "standard",
+                "columns": [
+                    "Source Port_0", "Source Port_1", "Source Port_2", "Source Port_3",
+                    "Source Port_4", "Source Port_5", "Source Port_6", "Source Port_7",
+                    "Source Port_8", "Source Port_9", "Destination Port_0", "Destination Port_1",
+                    "Destination Port_2", "Destination Port_3", "Destination Port_4", "Destination Port_5",
+                    "Destination Port_6", "Destination Port_7", "Destination Port_8", "Destination Port_9",
+                    "Protocol_0", "Protocol_1", "Protocol_2", "Protocol_3",
+                    "Protocol_4", "Protocol_5", "Protocol_6", "Protocol_7",
+                    "Protocol_8", "Protocol_9"
+                ]
+            },
+            {
+                "method": "GMM_log",
+                "columns": [
+                    "Total Fwd Packets", "Total Backward Packets", "Total Length of Fwd Packets", "Total Length of Bwd Packets",
+                    "Flow Duration", "Flow Bytes/s", "Flow Packets/s", "Fwd Packets/s", "Bwd Packets/s"
+                ]
+            }
+        ]
+    },
+    "model": {
+        "type": "vae_corr",
+        "model_kwargs": {
+            "hidden_dim": 1024,
+            "latent_dim": 128,
+            "use_beta": true,
+            "regularizer_type" : "kl",
+            "lr": 0.0001
+        }
+    }
+}
