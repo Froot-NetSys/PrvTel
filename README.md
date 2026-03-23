@@ -62,14 +62,14 @@ PrvTel/
 
 The following datasets were used in this project:
 
-- **Appraise H2020**
-- **NF-UQ-NIDS-v2 (NF IoT)**
-- **CAIDA Anonymized Internet Traces**
-- **DDoS-UDP**
-- **NERC**
-- **Cisco IE**
+- **[Appraise H2020](https://www.kaggle.com/datasets/ittibydgoszcz/appraise-h2020-real-labelled-netflow-dataset?resource=download)**
+- **[NF-UQ-NIDS-v2 (NF IoT)](https://espace.library.uq.edu.au/view/UQ:631a24a)**
+- **[CAIDA Anonymized Internet Traces](https://www.caida.org/catalog/datasets/passive_dataset/)**
+- **[CIC-DDoS2019](https://www.unb.ca/cic/datasets/ddos-2019.html)**
+- **[NERC](https://nerc.mghpcc.org/project/open-cloud-testbed/)**
+- **[Cisco IE](https://github.com/cisco-ie/telemetry)**
 
-More details on each dataset and how they were processed can be found in the paper. See Table 3 for a quick summary.
+For Cisco IE we also provide helper script for downloading the specific data we used. More details on each dataset and how they were processed can be found in the paper. See Table 3 for a quick summary.
 
 
 
